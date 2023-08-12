@@ -1,0 +1,23 @@
+---
+# This is software installation playbook
+
+- name: Install Software as required
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - yum:
+       name: "{{packages }}"
+       state: present
+      vars: 
+       packages:
+        - httpd
+        - git
+        - tcpdump
+        - php
+
+    - service:
+       name: httpd
+       state: started
+       enabled: yes
+
