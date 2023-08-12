@@ -1,0 +1,12 @@
+127.0.0.1
+
+[dbservers]
+dbserver1
+
+
+[webserver]
+webserver1
+
+
+[admin]
+adminserver1
